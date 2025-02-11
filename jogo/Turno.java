@@ -56,75 +56,83 @@ public class Turno {
 	}
 	
 	public void executarTurno(int contador) {
-		List<Jogador> personagens = determinarOrdem();
-		
-		System.out.println("===============");
-		System.out.println("Turno " + contador);
-		System.out.println("===============");
-		
-		for (Jogador jogador : personagens) {
-			Jogador alvo = escolherAlvo(jogador);
-			
-			if (alvo.getStatus() == StatusJogador.VOANDO) {
-				System.out.println("Alvo voando, ataque falhou");
-			} else {
-				ResultadoAtaque ataque = jogador.realizarAtaque(alvo);
-//				System.out.println(jogador.getNome() + " atacou " + alvo.getNome());
-//				System.out.println(jogador.toString());
-//				System.out.println(alvo.toString());
-				if (alvo.getStatus() == StatusJogador.ENVENENADO) {
-					alvo.setHp(alvo.getHp() - 10);
-//					System.out.println(alvo.getNome() + " está envenenado. -15 pontos de vida." + alvo.getNome());
-				} else if (alvo.getStatus() == StatusJogador.QUEIMANDO) {
-					alvo.setHp(alvo.getHp() - 15);
-					// log queimadura
-				}
-			}
-			
-			if (jogador.getStatus() == StatusJogador.VOANDO) {
-				((Dragao) jogador).setVoo(false);
-				// log dragao esta no chao agora
-			} else {
-				if (jogador.getStatus() == StatusJogador.NORMAL) {
-					// log jogador está normal
-				} else if (jogador.getStatus() == StatusJogador.ENVENENADO) {
-					jogador.setHp(jogador.getHp() - 10);
-					// log envenenamento
-				} else if (jogador.getStatus() == StatusJogador.QUEIMANDO) {
-					jogador.setHp(jogador.getHp() - 15);
-					// log queimadura
-				}
-			}
-			
-			if (jogador instanceof Heroi && !jogador.estaVivo()) {
-				System.out.println(jogador + " morreu!");
-				Jogo.getHerois().remove(jogador);
-				Jogo.setNumHerois(Jogo.getNumHerois() - 1);
-			} else if (jogador instanceof Monstro && !jogador.estaVivo()){
-				System.out.println(jogador.getNome() + " morreu!");
-				Jogo.getMonstros().remove(jogador);
-				Jogo.setNumMonstros(Jogo.getNumMonstros() - 1);
-			}
-			
-			if (alvo instanceof Heroi && !alvo.estaVivo()) {
-				System.out.println(alvo + " morreu!");
-				Jogo.getHerois().remove(alvo);
-				Jogo.setNumHerois(Jogo.getNumHerois() - 1);
-			} else if (alvo instanceof Monstro && !alvo.estaVivo()){
-				System.out.println(alvo.getNome() + " morreu!");
-				Jogo.getMonstros().remove(alvo);
-				Jogo.setNumMonstros(Jogo.getNumMonstros() - 1);
-			}
-		}
+	    List<Jogador> personagens = determinarOrdem();
+	    
+	    System.out.println("===============");
+	    System.out.println("Turno " + contador);
+	    System.out.println("===============");
+	    
+	    for (Jogador jogador : personagens) {
+	        Jogador alvo = escolherAlvo(jogador);
+
+	        // Verifica se um alvo foi encontrado
+	        if (alvo == null) {
+	            System.out.println(jogador.getNome() + " não encontrou um alvo válido e não atacará neste turno.");
+	            continue; // Pula para o próximo jogador
+	        }
+
+	        if (alvo.getStatus() == StatusJogador.VOANDO) {
+	            System.out.println("Alvo voando, ataque falhou");
+	        } else {
+	            ResultadoAtaque ataque = jogador.realizarAtaque(alvo);
+	            
+	            if (alvo.getStatus() == StatusJogador.ENVENENADO) {
+	                alvo.setHp(alvo.getHp() - 10);
+	            } else if (alvo.getStatus() == StatusJogador.QUEIMANDO) {
+	                alvo.setHp(alvo.getHp() - 15);
+	            }
+	        }
+
+	        if (jogador.getStatus() == StatusJogador.VOANDO) {
+	            ((Dragao) jogador).setVoo(false);
+	        } else {
+	            if (jogador.getStatus() == StatusJogador.ENVENENADO) {
+	                jogador.setHp(jogador.getHp() - 10);
+	            } else if (jogador.getStatus() == StatusJogador.QUEIMANDO) {
+	                jogador.setHp(jogador.getHp() - 15);
+	            }
+	        }
+
+	        if (jogador instanceof Heroi && !jogador.estaVivo()) {
+	            System.out.println(jogador.getNome() + " morreu!");
+	            Jogo.getHerois().remove(jogador);
+	            Jogo.setNumHerois(Jogo.getNumHerois() - 1);
+	        } else if (jogador instanceof Monstro && !jogador.estaVivo()){
+	            System.out.println(jogador.getNome() + " morreu!");
+	            Jogo.getMonstros().remove(jogador);
+	            Jogo.setNumMonstros(Jogo.getNumMonstros() - 1);
+	        }
+
+	        // Evita chamar métodos em um alvo nulo
+	        if (alvo != null && !alvo.estaVivo()) {
+	            System.out.println(alvo.getNome() + " morreu!");
+	            if (alvo instanceof Heroi) {
+	                Jogo.getHerois().remove(alvo);
+	                Jogo.setNumHerois(Jogo.getNumHerois() - 1);
+	            } else if (alvo instanceof Monstro) {
+	                Jogo.getMonstros().remove(alvo);
+	                Jogo.setNumMonstros(Jogo.getNumMonstros() - 1);
+	            }
+	        }
+	    }
 	}
+
 		
 	// TODO
 	// Implementar aqui como que escolhe o alvo
 	private Jogador escolherAlvo(Jogador atacante) {
-		if (atacante instanceof Heroi) {
-			return Jogo.getMonstros().get(0);
-		} else {
-			return Jogo.getHerois().get(0);
-		}
+	    if (atacante instanceof Heroi) {
+	        if (Jogo.getMonstros().isEmpty()) {
+	            System.out.println("Erro: Não há monstros disponíveis como alvo.");
+	            return null; 
+	        }
+	        return Jogo.getMonstros().get(0);
+	    } else {
+	        if (Jogo.getHerois().isEmpty()) {
+	            System.out.println("Erro: Não há heróis disponíveis como alvo.");
+	            return null; 
+	        }
+	        return Jogo.getHerois().get(0);
+	    }
 	}
 }
