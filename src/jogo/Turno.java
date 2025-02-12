@@ -42,6 +42,10 @@ public class Turno {
 	    
 	    for (Jogador atacante : personagens) {
 	        Jogador alvo = escolherAlvo(atacante);
+	        
+	        if (!atacante.estaVivo()) {
+	        	continue; // Se o atacante morrer durante o turno e ainda não tiver atacado, ele não pode atacar mesmo estando no array
+	        }
 
 	        // Verifica se um alvo foi encontrado
 	        if (alvo == null) {
@@ -88,7 +92,7 @@ public class Turno {
         	j.setHp(j.getHp() - 10);
         	System.out.println("Oh não, " + j.getNome() + " está envenenado. -10 pontos de vida.");
         	if (j.estaVivo()) 
-        		System.out.println("Stats atualizado do " + j.getNome() + "\n" + j.toString());
+        		System.out.println("Stats atualizado do " + j.getNome() + "\n" + j.toString() + "\n");
         	else
         		removerPersonagem(j);
 		}
@@ -99,7 +103,7 @@ public class Turno {
             j.setHp(j.getHp() - 15);
             System.out.println("Oh não, " + j.getNome() + " está queimando. -15 pontos de vida.");
             if (j.estaVivo())
-        		System.out.println("Stats atualizado do " + j.getNome() + "\n" + j.toString());
+        		System.out.println("Stats atualizado do " + j.getNome() + "\n" + j.toString() + "\n");
         	else
         		removerPersonagem(j);
         }
