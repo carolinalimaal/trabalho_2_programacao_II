@@ -129,15 +129,13 @@ public class Jogo {
 		System.out.println("===============\n");
 		
 		System.out.println("===============");
-		System.out.println("Heróis: ");
-		System.out.println("===============");
+		System.out.println("Heróis:\n");
 		for (Heroi h: Jogo.herois) {
 			System.out.println(h);
 		}
 		System.out.println("===============");
 		
-		System.out.println("Monstros: ");
-		System.out.println("===============");
+		System.out.println("Monstros:\n");
 		for (Monstro m: Jogo.monstros) {
 			System.out.println(m);
 		}
@@ -148,11 +146,9 @@ public class Jogo {
 		if (Jogo.herois.isEmpty()) {
 			System.out.println("Monstros venceram");
 			// adicionar log 
-			//  log.addLog("Monstros venceram!");
         } else {
         	System.out.println("Herois venceram");
         	// adicionar log 
-        	//  log.addLog("Heróis venceram!");
         }
 		// mostrar todos os logs 
 	}

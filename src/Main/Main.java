@@ -6,7 +6,7 @@ import jogo.Jogo;
 public class Main {
 
 	public static void main(String[] args) {
-		Jogo jogo = new Jogo(Dificuldade.FACIL);
+		Jogo jogo = new Jogo(Dificuldade.MEDIO);
 		jogo.iniciarJogo();
 		jogo.gerenciarTurnos();
 		
