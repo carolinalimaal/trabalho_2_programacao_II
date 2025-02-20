@@ -39,10 +39,10 @@ public class Turno {
     
     public void executarTurno(int contador) {
         List<Jogador> personagens = determinarOrdem();
-        System.out.println(personagens);
-        System.out.println("====================================");
+//        System.out.println(personagens);
+        System.out.println("============================================================");
         System.out.println("TURNO " + contador);
-        System.out.println("------------------");
+        System.out.println("------------------------------------------------------------");
         
         for (Jogador atacante : personagens) {
             Jogador alvo = escolherAlvo(atacante);
@@ -54,7 +54,7 @@ public class Turno {
             // Verifica se um alvo foi encontrado
             if (alvo == null) {
                 System.out.println(atacante.getNome() + " não encontrou um alvo válido e não atacará neste turno.");
-                System.out.println("------------------\n");
+                System.out.println("------------------------------------------------------------\n");
                 continue; // Pula para o próximo jogador
             }
             
@@ -84,7 +84,7 @@ public class Turno {
                 verificarQueimando(atacante);
             }
             
-            System.out.println("------------------\n");
+            System.out.println("------------------------------------------------------------\n");
         }
     }
     

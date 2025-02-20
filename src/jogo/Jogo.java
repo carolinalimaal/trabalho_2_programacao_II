@@ -134,7 +134,6 @@ public class Jogo {
     }
 
  // Método genérico para criar jogadores (heróis ou monstros)
- // Método genérico para criar jogadores (heróis ou monstros)
     private void criarJogadores(int quantidade, Class<? extends Jogador> tipoJogador) {
         if (tipoJogador == Monstro.class && this.dificuldade == Dificuldade.DIFICIL) {
             // Primeiro, adiciona um Dragão se ainda não houver nenhum
@@ -143,7 +142,6 @@ public class Jogo {
                 dragao.setNome(dragao.getNome() + "(1)");
                 Jogo.monstros.add(dragao);
                 Jogo.setNumMonstros(Jogo.getNumMonstros() + 1);
-                System.out.println("Dragão adicionado no modo difícil.");
             }
         }
 
@@ -157,7 +155,7 @@ public class Jogo {
             }
 
             if (tipoJogador.isInstance(j)) {
-                j.setNome(j.getNome() + "(" + (tipoJogador == Heroi.class ? Jogo.getNumHerois() : Jogo.getNumMonstros() + 1) + ")");
+                j.setNome(j.getNome() + "(" + (tipoJogador == Heroi.class ? Jogo.getNumHerois() + 1 : Jogo.getNumMonstros() + 1) + ")");
                 if (tipoJogador == Heroi.class) {
                     Jogo.herois.add((Heroi) j);
                     Jogo.setNumHerois(Jogo.getNumHerois() + 1);
@@ -172,34 +170,40 @@ public class Jogo {
 
     // Método para logar as informações de início do jogo
     private void logarInicioJogo() {
-        System.out.println("===============");
+    	// add log 
+        System.out.println("============================================================");
         System.out.println("Início do Jogo!");
         System.out.println("Dificuldade: "+ this.dificuldade);
-        System.out.println("===============\n");
+        System.out.println("============================================================\n");
 
+        // add log
         System.out.println("Heróis:\n");
         for (Heroi h : Jogo.herois) {
+            // add log
             System.out.println(h);
         }
-        System.out.println("===============");
+        // add log
+        System.out.println("============================================================");
         
+        // add log
         System.out.println("Monstros:\n");
         for (Monstro m : Jogo.monstros) {
+            // add log
             System.out.println(m);
         }
-        System.out.println("===============\n");
+        // add log
+        System.out.println("============================================================\n");
     }
 
     // Método para finalizar o jogo
     public void terminarJogo() {
         if (Jogo.herois.isEmpty()) {
-            System.out.println("Monstros venceram");
-            // adicionar log 
+            System.out.println("Monstros venceram"); // adicionar log 
+            
         } else {
-            System.out.println("Heróis venceram");
-            // adicionar log 
+            System.out.println("Heróis venceram"); // adicionar log 
         }
-        // Mostrar todos os logs
+        // Mostrar todos os logs quando o jogo acabar
     }
 
     // Método para gerenciar os turnos de jogo

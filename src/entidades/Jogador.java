@@ -113,7 +113,6 @@ public abstract class Jogador {
                 probLobisomem = 0.5;  // 50% Lobisomens
                 break;
             case DIFICIL:
-            default:
                 probGoblin = 0.5;  // 40% Goblins
                 probLobisomem = 0.4;  // 40% Lobisomens
                 probDragao = 0.1;  // 20% Dragões
@@ -169,8 +168,6 @@ public abstract class Jogador {
     }
 
     public static Jogador gerarJogadorEspecifico(Class<? extends Jogador> tipo, Dificuldade dificuldade) {
-        Random random = new Random();
-
         if (tipo == Dragao.class) {
             // Criando um Dragão com atributos ajustados à dificuldade
             int hpBase = 200, ataqueBase = 50, defesaBase = 40, destrezaBase = 10, velocidadeBase = 10;
