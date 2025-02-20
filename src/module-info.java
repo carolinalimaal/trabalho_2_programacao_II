@@ -4,5 +4,5 @@
 /**
  * 
  */
-module trabalho_2_jogo {
+module jogo_trabalho_2{
 }
