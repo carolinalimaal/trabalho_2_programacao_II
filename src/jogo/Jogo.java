@@ -2,168 +2,217 @@ package jogo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
+import entidades.Dragao;
 import entidades.Heroi;
 import entidades.Jogador;
 import entidades.Monstro;
 import enums.Dificuldade;
 
 public class Jogo {
-	private static List<Heroi> herois;
-	private static List<Monstro> monstros;
-	private static int numHerois, numMonstros;
-	private Jogador jogadorMaiorAtaque, jogadorMenorVida;
-	private final Dificuldade dificuldade;
-	private Log logs;
-	
-	public Jogo(Dificuldade dificuldade) {
-		Jogo.herois = new ArrayList<Heroi>();
-		Jogo.monstros = new ArrayList<Monstro>();
-		this.jogadorMaiorAtaque = null;
-		this.jogadorMenorVida = null;
-		this.dificuldade = dificuldade;
-		this.logs = new Log();		
-	}
+    // Listas para armazenar heróis e monstros
+    private static List<Heroi> herois;
+    private static List<Monstro> monstros;
+    
+    // Contadores para o número de heróis e monstros
+    private static int numHerois, numMonstros;
+    
+    // Jogadores com maior ataque e menor vida
+    private Jogador jogadorMaiorAtaque, jogadorMenorVida;
+    
+    // Nível de dificuldade e logs do jogo
+    private final Dificuldade dificuldade;
+    private Log logs;
 
-	public static List<Heroi> getHerois() {
-		return herois;
-	}
+    // Construtor que inicializa o jogo com a dificuldade selecionada
+    public Jogo(Dificuldade dificuldade) {
+        Jogo.herois = new ArrayList<>();
+        Jogo.monstros = new ArrayList<>();
+        this.jogadorMaiorAtaque = null;
+        this.jogadorMenorVida = null;
+        this.dificuldade = dificuldade;
+        this.logs = new Log();        
+    }
 
-	public static List<Monstro> getMonstros() {
-		return monstros;
-	}
+    // Métodos getters e setters para heróis, monstros e contadores
+    public static List<Heroi> getHerois() {
+        return herois;
+    }
 
-	public static int getNumHerois() {
-		return numHerois;
-	}
+    public static List<Monstro> getMonstros() {
+        return monstros;
+    }
 
-	public static void setNumHerois(int numHerois) {
-		Jogo.numHerois = numHerois;
-	}
+    public static int getNumHerois() {
+        return numHerois;
+    }
 
-	public static int getNumMonstros() {
-		return numMonstros;
-	}
+    public static void setNumHerois(int numHerois) {
+        Jogo.numHerois = numHerois;
+    }
 
-	public static void setNumMonstros(int numMonstros) {
-		Jogo.numMonstros = numMonstros;
-	}
+    public static int getNumMonstros() {
+        return numMonstros;
+    }
 
-	public Jogador getJogadorMaiorAtaque() {
-		return jogadorMaiorAtaque;
-	}
+    public static void setNumMonstros(int numMonstros) {
+        Jogo.numMonstros = numMonstros;
+    }
 
-	public void setJogadorMaiorAtaque() {
-		List<Jogador> personagens = new ArrayList<Jogador>();
-		personagens.addAll(Jogo.herois);
-		personagens.addAll(Jogo.monstros);
-		Jogador maiorAtaque = personagens.get(0);
-		for (int i = 1; i < personagens.size(); i++) {
-			if (personagens.get(i).getAtaque() > maiorAtaque.getAtaque())
-				maiorAtaque = personagens.get(i);
-		}
-		this.jogadorMaiorAtaque = maiorAtaque;
-	}
+    public Jogador getJogadorMaiorAtaque() {
+        return jogadorMaiorAtaque;
+    }
 
-	public Jogador getJogadorMenorVida() {
-		return jogadorMenorVida;
-	}
+    public Jogador getJogadorMenorVida() {
+        return jogadorMenorVida;
+    }
 
-	public void setJogadorMenorVida() {
-		List<Jogador> personagens = new ArrayList<Jogador>();
-		personagens.addAll(Jogo.herois);
-		personagens.addAll(Jogo.monstros);
-		Jogador menorHP = personagens.get(0);
-		for (int i = 1; i < personagens.size(); i++) {
-			if (personagens.get(i).getHp() < menorHP.getHp())
-				menorHP = personagens.get(i);
-		}
-		this.jogadorMaiorAtaque = menorHP;
-	}
+    // Método para encontrar o jogador com maior ataque
+    public void setJogadorMaiorAtaque() {
+        jogadorMaiorAtaque = encontrarJogadorPorAtributo("maiorataque");
+    }
 
-	public Log getLogs() {
-		return logs;
-	}
+    // Método para encontrar o jogador com menor vida
+    public void setJogadorMenorVida() {
+        jogadorMenorVida = encontrarJogadorPorAtributo("menorvida");
+    }
 
-	public Dificuldade getDificuldade() {
-		return dificuldade;
-	}
-	
-	public void iniciarJogo() {
-		Random random = new Random();
-		int quantidadeHerois, quantidadeMonstros;
-		
-		if (this.getDificuldade() == Dificuldade.FACIL) {
-			quantidadeHerois = random.nextInt(3) + 7;
-			quantidadeMonstros = random.nextInt(3) + 1;	
-		}
-		else if (this.getDificuldade() == Dificuldade.MEDIO) {
-			quantidadeHerois = random.nextInt(3) + 4;
-			quantidadeMonstros = random.nextInt(3) + 4;
-		}
-		else {
-			quantidadeHerois = random.nextInt(3) + 1;
-			quantidadeMonstros = random.nextInt(3) + 7;
-		}
-		
-		while (Jogo.getNumHerois() < quantidadeHerois) {
-			Jogador j = Jogador.gerarJogadorAleatorio();
-			if (j instanceof Heroi) {
-				j.setNome(j.getNome() + "(" + (Jogo.getNumHerois() + 1) +")");
-				Jogo.herois.add((Heroi) j);
-				Jogo.setNumHerois(Jogo.getNumHerois() + 1);
-			}
-		}
-		while (Jogo.getNumMonstros() < quantidadeMonstros) {
-			Jogador j = Jogador.gerarJogadorAleatorio();
-			if (j instanceof Monstro) {
-				j.setNome(j.getNome() + "(" + (Jogo.getNumMonstros() + 1) +")");
-				Jogo.monstros.add((Monstro) j);
-				Jogo.setNumMonstros(Jogo.getNumMonstros() + 1);
-			}
-		}
-		// ADICIONAR LOG INICIAL 
-		System.out.println("===============");
-		System.out.println("Início do Jogo!");
-		System.out.println("===============\n");
-		
-		System.out.println("===============");
-		System.out.println("Heróis:\n");
-		for (Heroi h: Jogo.herois) {
-			System.out.println(h);
-		}
-		System.out.println("===============");
-		
-		System.out.println("Monstros:\n");
-		for (Monstro m: Jogo.monstros) {
-			System.out.println(m);
-		}
-		System.out.println("===============\n");
-	}
-	
-	public void terminarJogo() {
-		if (Jogo.herois.isEmpty()) {
-			System.out.println("Monstros venceram");
-			// adicionar log 
-        } else {
-        	System.out.println("Herois venceram");
-        	// adicionar log 
+    // Método genérico para encontrar o jogador com maior ataque ou menor vida
+    private Jogador encontrarJogadorPorAtributo(String atributo) {
+        List<Jogador> personagens = new ArrayList<>();
+        personagens.addAll(Jogo.herois);
+        personagens.addAll(Jogo.monstros);
+
+        Jogador melhorJogador = personagens.get(0);
+        for (Jogador currentJogador : personagens) {
+            if (atributo.equals("maiorataque") && currentJogador.getAtaque() > melhorJogador.getAtaque()) {
+                melhorJogador = currentJogador;
+            } else if (atributo.equals("menorvida") && currentJogador.getHp() < melhorJogador.getHp()) {
+                melhorJogador = currentJogador;
+            }
         }
-		// mostrar todos os logs 
-	}
-	
-	public void gerenciarTurnos() {
-		Turno turno = new Turno(Jogo.herois, Jogo.monstros, this.logs);
-		int contador = 1;
-		while (true) {
-			if (Jogo.herois.isEmpty())
-				break;
-			if (Jogo.monstros.isEmpty())
-				break;
-			turno.executarTurno(contador);
-			contador++;
-		}
-		this.terminarJogo();
-	}
+        return melhorJogador;
+    }
+
+    public Log getLogs() {
+        return logs;
+    }
+
+    public Dificuldade getDificuldade() {
+        return dificuldade;
+    }
+
+    // Inicia o jogo com base na dificuldade
+    public void iniciarJogo() {
+        int quantidadeHerois, quantidadeMonstros;
+        
+        // Define a quantidade de heróis e monstros conforme a dificuldade
+        switch (this.getDificuldade()) {
+            case FACIL:
+                quantidadeHerois = 5;
+                quantidadeMonstros = 10;
+                break;
+            case MEDIO:
+                quantidadeHerois = 5;
+                quantidadeMonstros = 13;
+                break;
+            case DIFICIL:
+                quantidadeHerois = 6;
+                quantidadeMonstros = 10;
+                break;
+            default:
+                quantidadeHerois = 5;
+                quantidadeMonstros = 5;
+        }
+        
+        // Criação de heróis e monstros
+        criarJogadores(quantidadeHerois, Heroi.class);
+        criarJogadores(quantidadeMonstros, Monstro.class);
+
+        // Adiciona log de início do jogo
+        logarInicioJogo();
+    }
+
+ // Método genérico para criar jogadores (heróis ou monstros)
+ // Método genérico para criar jogadores (heróis ou monstros)
+    private void criarJogadores(int quantidade, Class<? extends Jogador> tipoJogador) {
+        if (tipoJogador == Monstro.class && this.dificuldade == Dificuldade.DIFICIL) {
+            // Primeiro, adiciona um Dragão se ainda não houver nenhum
+            if (Jogo.monstros.stream().noneMatch(m -> m instanceof Dragao)) {
+                Dragao dragao = (Dragao) Jogador.gerarJogadorEspecifico(Dragao.class, this.dificuldade);
+                dragao.setNome(dragao.getNome() + "(1)");
+                Jogo.monstros.add(dragao);
+                Jogo.setNumMonstros(Jogo.getNumMonstros() + 1);
+                System.out.println("Dragão adicionado no modo difícil.");
+            }
+        }
+
+        // Agora gera os outros jogadores normalmente
+        while (tipoJogador == Heroi.class ? Jogo.getNumHerois() < quantidade : Jogo.getNumMonstros() < quantidade) {
+            Jogador j = Jogador.gerarJogadorAleatorio(this.dificuldade);
+
+            // Evita gerar mais Dragões se já houver um
+            if (j instanceof Dragao && this.dificuldade == Dificuldade.DIFICIL) {
+                continue; // Pula essa iteração e tenta gerar outro monstro
+            }
+
+            if (tipoJogador.isInstance(j)) {
+                j.setNome(j.getNome() + "(" + (tipoJogador == Heroi.class ? Jogo.getNumHerois() : Jogo.getNumMonstros() + 1) + ")");
+                if (tipoJogador == Heroi.class) {
+                    Jogo.herois.add((Heroi) j);
+                    Jogo.setNumHerois(Jogo.getNumHerois() + 1);
+                } else {
+                    Jogo.monstros.add((Monstro) j);
+                    Jogo.setNumMonstros(Jogo.getNumMonstros() + 1);
+                }
+            }
+        }
+    }
+
+
+    // Método para logar as informações de início do jogo
+    private void logarInicioJogo() {
+        System.out.println("===============");
+        System.out.println("Início do Jogo!");
+        System.out.println("Dificuldade: "+ this.dificuldade);
+        System.out.println("===============\n");
+
+        System.out.println("Heróis:\n");
+        for (Heroi h : Jogo.herois) {
+            System.out.println(h);
+        }
+        System.out.println("===============");
+        
+        System.out.println("Monstros:\n");
+        for (Monstro m : Jogo.monstros) {
+            System.out.println(m);
+        }
+        System.out.println("===============\n");
+    }
+
+    // Método para finalizar o jogo
+    public void terminarJogo() {
+        if (Jogo.herois.isEmpty()) {
+            System.out.println("Monstros venceram");
+            // adicionar log 
+        } else {
+            System.out.println("Heróis venceram");
+            // adicionar log 
+        }
+        // Mostrar todos os logs
+    }
+
+    // Método para gerenciar os turnos de jogo
+    public void gerenciarTurnos() {
+        Turno turno = new Turno(Jogo.herois, Jogo.monstros, this.logs, this.dificuldade);
+        int contador = 1;
+        while (true) {
+            if (Jogo.herois.isEmpty() || Jogo.monstros.isEmpty()) {
+                break;
+            }
+            turno.executarTurno(contador);
+            contador++;
+        }
+        this.terminarJogo();
+    }
 }
