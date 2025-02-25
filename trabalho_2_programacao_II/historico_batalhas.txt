@@ -1,0 +1,436 @@
+===============
+Início do Jogo!
+Dificuldade: FACIL
+===============
+Heróis:
+Arqueiro(0) | HP: 90.0 | ATAQUE: 35 | DEFESA: 15 | DESTREZA: 30 | VELOCIDADE: 25
+Guerreiro(1) | HP: 120.0 | ATAQUE: 30 | DEFESA: 27 | DESTREZA: 10 | VELOCIDADE: 20
+Guerreiro(2) | HP: 120.0 | ATAQUE: 30 | DEFESA: 32 | DESTREZA: 10 | VELOCIDADE: 20
+Guerreiro(3) | HP: 120.0 | ATAQUE: 30 | DEFESA: 27 | DESTREZA: 10 | VELOCIDADE: 20
+Mago(4) | HP: 80.0 | ATAQUE: 40 | DEFESA: 10 | DESTREZA: 25 | VELOCIDADE: 15
+===============
+Monstros:
+Goblin(1) | HP: 35.0 | ATAQUE: 10 | DEFESA: 3 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(2) | HP: 35.0 | ATAQUE: 10 | DEFESA: 3 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(3) | HP: 35.0 | ATAQUE: 10 | DEFESA: 3 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(4) | HP: 35.0 | ATAQUE: 10 | DEFESA: 3 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(5) | HP: 35.0 | ATAQUE: 10 | DEFESA: 3 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(6) | HP: 35.0 | ATAQUE: 10 | DEFESA: 3 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(7) | HP: 35.0 | ATAQUE: 10 | DEFESA: 3 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(8) | HP: 35.0 | ATAQUE: 10 | DEFESA: 3 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(9) | HP: 35.0 | ATAQUE: 10 | DEFESA: 3 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(10) | HP: 35.0 | ATAQUE: 10 | DEFESA: 3 | DESTREZA: 20 | VELOCIDADE: 30
+===============
+
+
+📜  TURNO 1 📜
+═════════════════════════════════════════════════════════════
+⚔️  Goblin(1) atacou Guerreiro(3) → ERROU (Dano: 0)
+📊  Estado de Goblin(1) → Vida: 35.0 | Status: NORMAL
+⚔️  Goblin(2) atacou Guerreiro(2) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(2) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Guerreiro(2) → Vida: 119.0 | Status: NORMAL
+⚔️  Goblin(3) atacou Guerreiro(2) → ERROU (Dano: 0)
+📊  Estado de Goblin(3) → Vida: 35.0 | Status: NORMAL
+⚔️  Goblin(4) atacou Arqueiro(0) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(4) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Arqueiro(0) → Vida: 89.0 | Status: NORMAL
+⚔️  Goblin(5) atacou Guerreiro(1) → ATAQUE CRÍTICO! (Dano: 2)
+📊  Estado de Goblin(5) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Guerreiro(1) → Vida: 118.0 | Status: NORMAL
+⚔️  Goblin(6) atacou Guerreiro(2) → ERROU (Dano: 0)
+📊  Estado de Goblin(6) → Vida: 35.0 | Status: NORMAL
+⚔️  Goblin(7) atacou Mago(4) → ERROU (Dano: 0)
+📊  Estado de Goblin(7) → Vida: 35.0 | Status: NORMAL
+⚔️  Goblin(8) atacou Arqueiro(0) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(8) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Arqueiro(0) → Vida: 88.0 | Status: NORMAL
+⚔️  Goblin(9) atacou Guerreiro(2) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(9) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Guerreiro(2) → Vida: 118.0 | Status: NORMAL
+⚔️  Goblin(10) atacou Guerreiro(2) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(10) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Guerreiro(2) → Vida: 117.0 | Status: NORMAL
+⚔️  Arqueiro(0) atacou Goblin(1) → ERROU (Dano: 0)
+⚔️  Guerreiro(1) atacou Goblin(1) → ERROU (Dano: 0)
+⚔️  Guerreiro(2) atacou Goblin(1) → ERROU (Dano: 0)
+⚔️  Guerreiro(3) atacou Goblin(1) → ERROU (Dano: 0)
+⚔️  Mago(4) atacou Goblin(1) → ATAQUE NORMAL (Dano: 37)
+💀  Goblin(1) foi derrotado!
+📊  Estado de Mago(4) → Vida: 80.0 | Status: NORMAL
+📊  Estado de Goblin(1) → Vida: -2.0 | Status: NORMAL
+💀  Goblin(1) foi derrotado!
+
+📜  TURNO 2 📜
+═════════════════════════════════════════════════════════════
+Goblin(2) está sem dardos e tenta fugir!
+Goblin(3) está sem dardos e tenta fugir!
+⚔️  Goblin(4) atacou Mago(4) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(4) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Mago(4) → Vida: 79.0 | Status: NORMAL
+⚔️  Goblin(5) atacou Guerreiro(3) → ERROU (Dano: 0)
+📊  Estado de Goblin(5) → Vida: 35.0 | Status: NORMAL
+⚔️  Goblin(6) atacou Guerreiro(1) → ATAQUE CRÍTICO! (Dano: 2)
+📊  Estado de Goblin(6) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Guerreiro(1) → Vida: 116.0 | Status: NORMAL
+Goblin(7) está sem dardos e tenta fugir!
+⚔️  Goblin(8) atacou Guerreiro(3) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(8) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Guerreiro(3) → Vida: 119.0 | Status: NORMAL
+⚔️  Goblin(9) atacou Guerreiro(3) → ERROU (Dano: 0)
+📊  Estado de Goblin(9) → Vida: 35.0 | Status: NORMAL
+⚔️  Goblin(10) atacou Mago(4) → ERROU (Dano: 0)
+📊  Estado de Goblin(10) → Vida: 35.0 | Status: NORMAL
+⚔️  Arqueiro(0) atacou Goblin(2) → ATAQUE CRÍTICO! (Dano: 64)
+💀  Goblin(2) foi derrotado!
+📊  Estado de Arqueiro(0) → Vida: 88.0 | Status: NORMAL
+📊  Estado de Goblin(2) → Vida: -29.0 | Status: NORMAL
+Guerreiro(1) usou sua FORÇA BRUTA e causou dano extra!
+⚔️  Guerreiro(1) atacou Goblin(3) → ATAQUE NORMAL (Dano: 32)
+📊  Estado de Guerreiro(1) → Vida: 116.0 | Status: NORMAL
+📊  Estado de Goblin(3) → Vida: 3.0 | Status: NORMAL
+⚔️  Guerreiro(2) atacou Goblin(3) → ERROU (Dano: 0)
+Guerreiro(3) usou sua FORÇA BRUTA e causou dano extra!
+⚔️  Guerreiro(3) atacou Goblin(3) → ATAQUE CRÍTICO! (Dano: 73)
+💀  Goblin(3) foi derrotado!
+📊  Estado de Guerreiro(3) → Vida: 119.0 | Status: NORMAL
+📊  Estado de Goblin(3) → Vida: -70.0 | Status: NORMAL
+⚔️  Mago(4) atacou Goblin(4) → ATAQUE NORMAL (Dano: 37)
+💀  Goblin(4) foi derrotado!
+📊  Estado de Mago(4) → Vida: 79.0 | Status: NORMAL
+📊  Estado de Goblin(4) → Vida: -2.0 | Status: NORMAL
+💀  Goblin(2) foi derrotado!
+💀  Goblin(3) foi derrotado!
+💀  Goblin(4) foi derrotado!
+
+📜  TURNO 3 📜
+═════════════════════════════════════════════════════════════
+⚔️  Goblin(5) atacou Guerreiro(3) → ERROU (Dano: 0)
+📊  Estado de Goblin(5) → Vida: 35.0 | Status: NORMAL
+⚔️  Goblin(6) atacou Guerreiro(1) → ERROU (Dano: 0)
+📊  Estado de Goblin(6) → Vida: 35.0 | Status: NORMAL
+Goblin(7) está sem dardos e tenta fugir!
+Goblin(8) está sem dardos e tenta fugir!
+⚔️  Goblin(9) atacou Arqueiro(0) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(9) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Arqueiro(0) → Vida: 87.0 | Status: NORMAL
+⚔️  Goblin(10) atacou Mago(4) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(10) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Mago(4) → Vida: 78.0 | Status: NORMAL
+⚔️  Arqueiro(0) atacou Goblin(5) → ERROU (Dano: 0)
+⚔️  Guerreiro(1) atacou Goblin(5) → ERROU (Dano: 0)
+⚔️  Guerreiro(2) atacou Goblin(5) → ATAQUE NORMAL (Dano: 27)
+📊  Estado de Guerreiro(2) → Vida: 117.0 | Status: NORMAL
+📊  Estado de Goblin(5) → Vida: 8.0 | Status: NORMAL
+⚔️  Guerreiro(3) atacou Goblin(5) → ERROU (Dano: 0)
+⚔️  Mago(4) atacou Goblin(5) → ERROU (Dano: 0)
+
+📜  TURNO 4 📜
+═════════════════════════════════════════════════════════════
+Goblin(5) está sem dardos e tenta fugir!
+⚔️  Goblin(6) atacou Arqueiro(0) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(6) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Arqueiro(0) → Vida: 86.0 | Status: NORMAL
+Goblin(7) está sem dardos e tenta fugir!
+Goblin(8) está sem dardos e tenta fugir!
+⚔️  Goblin(9) atacou Mago(4) → ERROU (Dano: 0)
+📊  Estado de Goblin(9) → Vida: 35.0 | Status: NORMAL
+⚔️  Goblin(10) atacou Guerreiro(1) → ATAQUE CRÍTICO! (Dano: 2)
+📊  Estado de Goblin(10) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Guerreiro(1) → Vida: 114.0 | Status: NORMAL
+⚔️  Arqueiro(0) atacou Goblin(5) → ATAQUE CRÍTICO! (Dano: 64)
+💀  Goblin(5) foi derrotado!
+📊  Estado de Arqueiro(0) → Vida: 86.0 | Status: NORMAL
+📊  Estado de Goblin(5) → Vida: -56.0 | Status: NORMAL
+⚔️  Guerreiro(1) atacou Goblin(6) → ERROU (Dano: 0)
+Guerreiro(2) usou sua FORÇA BRUTA e causou dano extra!
+⚔️  Guerreiro(2) atacou Goblin(6) → ATAQUE CRÍTICO! (Dano: 74)
+💀  Goblin(6) foi derrotado!
+📊  Estado de Guerreiro(2) → Vida: 117.0 | Status: NORMAL
+📊  Estado de Goblin(6) → Vida: -39.0 | Status: NORMAL
+⚔️  Guerreiro(3) atacou Goblin(7) → ERROU (Dano: 0)
+⚔️  Mago(4) atacou Goblin(7) → ATAQUE NORMAL (Dano: 37)
+💀  Goblin(7) foi derrotado!
+📊  Estado de Mago(4) → Vida: 78.0 | Status: NORMAL
+📊  Estado de Goblin(7) → Vida: -2.0 | Status: NORMAL
+💀  Goblin(5) foi derrotado!
+💀  Goblin(6) foi derrotado!
+💀  Goblin(7) foi derrotado!
+
+📜  TURNO 5 📜
+═════════════════════════════════════════════════════════════
+Goblin(8) está sem dardos e tenta fugir!
+⚔️  Goblin(9) atacou Guerreiro(1) → ERROU (Dano: 0)
+📊  Estado de Goblin(9) → Vida: 35.0 | Status: NORMAL
+⚔️  Goblin(10) atacou Guerreiro(2) → ATAQUE CRÍTICO! (Dano: 2)
+📊  Estado de Goblin(10) → Vida: 35.0 | Status: NORMAL
+📊  Estado de Guerreiro(2) → Vida: 115.0 | Status: NORMAL
+⚔️  Arqueiro(0) atacou Goblin(8) → ATAQUE CRÍTICO! (Dano: 64)
+💀  Goblin(8) foi derrotado!
+📊  Estado de Arqueiro(0) → Vida: 86.0 | Status: NORMAL
+📊  Estado de Goblin(8) → Vida: -29.0 | Status: NORMAL
+Guerreiro(1) usou sua FORÇA BRUTA e causou dano extra!
+⚔️  Guerreiro(1) atacou Goblin(9) → ATAQUE NORMAL (Dano: 32)
+📊  Estado de Guerreiro(1) → Vida: 114.0 | Status: NORMAL
+📊  Estado de Goblin(9) → Vida: 3.0 | Status: NORMAL
+⚔️  Guerreiro(2) atacou Goblin(9) → ATAQUE NORMAL (Dano: 27)
+💀  Goblin(9) foi derrotado!
+📊  Estado de Guerreiro(2) → Vida: 115.0 | Status: NORMAL
+📊  Estado de Goblin(9) → Vida: -24.0 | Status: NORMAL
+⚔️  Guerreiro(3) atacou Goblin(10) → ERROU (Dano: 0)
+⚔️  Mago(4) atacou Goblin(10) → ATAQUE NORMAL (Dano: 37)
+💀  Goblin(10) foi derrotado!
+📊  Estado de Mago(4) → Vida: 78.0 | Status: NORMAL
+📊  Estado de Goblin(10) → Vida: -2.0 | Status: NORMAL
+💀  Goblin(8) foi derrotado!
+💀  Goblin(9) foi derrotado!
+💀  Goblin(10) foi derrotado!
+Heróis restantes: 5
+Monstros restantes: 0
+
+═════════════════════════════════════════════════════════════
+🎉  FIM DO JOGO: HERÓIS VENCERAM! 🎉
+═════════════════════════════════════════════════════════════
+
+════════════════════════ FIM DA PARTIDA ════════════════════════
+
+===============
+Início do Jogo!
+Dificuldade: MEDIO
+===============
+Heróis:
+Guerreiro(0) | HP: 120.0 | ATAQUE: 30 | DEFESA: 36 | DESTREZA: 10 | VELOCIDADE: 20
+Mago(1) | HP: 80.0 | ATAQUE: 40 | DEFESA: 10 | DESTREZA: 25 | VELOCIDADE: 15
+Mago(2) | HP: 80.0 | ATAQUE: 40 | DEFESA: 10 | DESTREZA: 25 | VELOCIDADE: 15
+Arqueiro(3) | HP: 90.0 | ATAQUE: 35 | DEFESA: 15 | DESTREZA: 30 | VELOCIDADE: 25
+Arqueiro(4) | HP: 90.0 | ATAQUE: 35 | DEFESA: 15 | DESTREZA: 30 | VELOCIDADE: 25
+Mago(5) | HP: 80.0 | ATAQUE: 40 | DEFESA: 10 | DESTREZA: 25 | VELOCIDADE: 15
+===============
+Monstros:
+Goblin(1) | HP: 50.0 | ATAQUE: 15 | DEFESA: 5 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(2) | HP: 50.0 | ATAQUE: 15 | DEFESA: 5 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(3) | HP: 50.0 | ATAQUE: 15 | DEFESA: 5 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(4) | HP: 50.0 | ATAQUE: 15 | DEFESA: 5 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(5) | HP: 50.0 | ATAQUE: 15 | DEFESA: 5 | DESTREZA: 20 | VELOCIDADE: 30
+Lobisomem(6) | HP: 120.0 | ATAQUE: 35 | DEFESA: 20 | DESTREZA: 30 | VELOCIDADE: 35
+Goblin(7) | HP: 50.0 | ATAQUE: 15 | DEFESA: 5 | DESTREZA: 20 | VELOCIDADE: 30
+Goblin(8) | HP: 50.0 | ATAQUE: 15 | DEFESA: 5 | DESTREZA: 20 | VELOCIDADE: 30
+===============
+
+
+📜  TURNO 1 📜
+═════════════════════════════════════════════════════════════
+⚔️  Lobisomem(6) atacou Guerreiro(0) → ERROU (Dano: 0)
+⚔️  Goblin(1) atacou Guerreiro(0) → ERROU (Dano: 0)
+📊  Estado de Goblin(1) → Vida: 50.0 | Status: NORMAL
+⚔️  Goblin(2) atacou Guerreiro(0) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(2) → Vida: 50.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 119.0 | Status: NORMAL
+⚔️  Goblin(3) atacou Guerreiro(0) → ERROU (Dano: 0)
+📊  Estado de Goblin(3) → Vida: 50.0 | Status: NORMAL
+⚔️  Goblin(4) atacou Guerreiro(0) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(4) → Vida: 50.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 118.0 | Status: NORMAL
+⚔️  Goblin(5) atacou Guerreiro(0) → ERROU (Dano: 0)
+📊  Estado de Goblin(5) → Vida: 50.0 | Status: NORMAL
+⚔️  Goblin(7) atacou Guerreiro(0) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(7) → Vida: 50.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 117.0 | Status: NORMAL
+⚔️  Goblin(8) atacou Mago(1) → ERROU (Dano: 0)
+📊  Estado de Goblin(8) → Vida: 50.0 | Status: NORMAL
+⚔️  Arqueiro(3) atacou Goblin(1) → ATAQUE NORMAL (Dano: 30)
+📊  Estado de Arqueiro(3) → Vida: 90.0 | Status: NORMAL
+📊  Estado de Goblin(1) → Vida: 20.0 | Status: NORMAL
+⚔️  Arqueiro(4) atacou Goblin(1) → ERROU (Dano: 0)
+⚔️  Guerreiro(0) atacou Goblin(1) → ATAQUE NORMAL (Dano: 25)
+💀  Goblin(1) foi derrotado!
+📊  Estado de Guerreiro(0) → Vida: 117.0 | Status: NORMAL
+📊  Estado de Goblin(1) → Vida: -5.0 | Status: NORMAL
+⚔️  Mago(1) atacou Goblin(2) → ATAQUE NORMAL (Dano: 35)
+🔥  Goblin(2) sofreu 0 de dano por envenenamento
+📊  Estado de Mago(1) → Vida: 80.0 | Status: NORMAL
+📊  Estado de Goblin(2) → Vida: 15.0 | Status: ENVENENADO
+🔥  Goblin(2) sofreu 10 de dano por envenenamento
+⚔️  Mago(2) atacou Goblin(2) → ATAQUE NORMAL (Dano: 35)
+💀  Goblin(2) foi derrotado!
+📊  Estado de Mago(2) → Vida: 80.0 | Status: NORMAL
+📊  Estado de Goblin(2) → Vida: -30.0 | Status: ENVENENADO
+⚔️  Mago(5) atacou Goblin(3) → ERROU (Dano: 0)
+💀  Goblin(1) foi derrotado!
+💀  Goblin(2) foi derrotado!
+
+📜  TURNO 2 📜
+═════════════════════════════════════════════════════════════
+⚔️  Lobisomem(6) atacou Guerreiro(0) → ERROU (Dano: 0)
+⚔️  Goblin(3) atacou Guerreiro(0) → ERROU (Dano: 0)
+📊  Estado de Goblin(3) → Vida: 50.0 | Status: NORMAL
+⚔️  Goblin(4) atacou Guerreiro(0) → ERROU (Dano: 0)
+📊  Estado de Goblin(4) → Vida: 50.0 | Status: NORMAL
+⚔️  Goblin(5) atacou Guerreiro(0) → ERROU (Dano: 0)
+📊  Estado de Goblin(5) → Vida: 50.0 | Status: NORMAL
+⚔️  Goblin(7) atacou Guerreiro(0) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(7) → Vida: 50.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 116.0 | Status: NORMAL
+Goblin(8) está sem dardos e tenta fugir!
+⚔️  Arqueiro(3) atacou Goblin(3) → ATAQUE NORMAL (Dano: 30)
+📊  Estado de Arqueiro(3) → Vida: 90.0 | Status: NORMAL
+📊  Estado de Goblin(3) → Vida: 20.0 | Status: NORMAL
+⚔️  Arqueiro(4) atacou Goblin(3) → ATAQUE NORMAL (Dano: 30)
+💀  Goblin(3) foi derrotado!
+📊  Estado de Arqueiro(4) → Vida: 90.0 | Status: NORMAL
+📊  Estado de Goblin(3) → Vida: -10.0 | Status: NORMAL
+⚔️  Guerreiro(0) atacou Goblin(4) → ATAQUE NORMAL (Dano: 25)
+📊  Estado de Guerreiro(0) → Vida: 116.0 | Status: NORMAL
+📊  Estado de Goblin(4) → Vida: 25.0 | Status: NORMAL
+⚔️  Mago(1) atacou Goblin(4) → ERROU (Dano: 0)
+⚔️  Mago(2) atacou Goblin(4) → ERROU (Dano: 0)
+⚔️  Mago(5) atacou Goblin(4) → ATAQUE NORMAL (Dano: 35)
+💀  Goblin(4) foi derrotado!
+📊  Estado de Mago(5) → Vida: 80.0 | Status: NORMAL
+📊  Estado de Goblin(4) → Vida: -10.0 | Status: NORMAL
+💀  Goblin(3) foi derrotado!
+💀  Goblin(4) foi derrotado!
+
+📜  TURNO 3 📜
+═════════════════════════════════════════════════════════════
+⚔️  Lobisomem(6) atacou Guerreiro(0) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Lobisomem(6) → Vida: 120.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 115.0 | Status: NORMAL
+⚔️  Goblin(5) atacou Guerreiro(0) → ATAQUE CRÍTICO! (Dano: 2)
+📊  Estado de Goblin(5) → Vida: 50.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 113.0 | Status: NORMAL
+⚔️  Goblin(7) atacou Guerreiro(0) → ATAQUE NORMAL (Dano: 1)
+📊  Estado de Goblin(7) → Vida: 50.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 112.0 | Status: NORMAL
+Goblin(8) está sem dardos e tenta fugir!
+⚔️  Arqueiro(3) atacou Goblin(5) → ATAQUE NORMAL (Dano: 30)
+📊  Estado de Arqueiro(3) → Vida: 90.0 | Status: NORMAL
+📊  Estado de Goblin(5) → Vida: 20.0 | Status: NORMAL
+⚔️  Arqueiro(4) atacou Goblin(5) → ERROU (Dano: 0)
+Guerreiro(0) usou sua FORÇA BRUTA e causou dano extra!
+⚔️  Guerreiro(0) atacou Goblin(5) → ATAQUE NORMAL (Dano: 32)
+💀  Goblin(5) foi derrotado!
+📊  Estado de Guerreiro(0) → Vida: 112.0 | Status: NORMAL
+📊  Estado de Goblin(5) → Vida: -12.0 | Status: NORMAL
+⚔️  Mago(1) atacou Goblin(7) → ATAQUE NORMAL (Dano: 35)
+🔥  Goblin(7) sofreu 0 de dano por envenenamento
+📊  Estado de Mago(1) → Vida: 80.0 | Status: NORMAL
+📊  Estado de Goblin(7) → Vida: 15.0 | Status: ENVENENADO
+🔥  Goblin(7) sofreu 10 de dano por envenenamento
+⚔️  Mago(2) atacou Goblin(7) → ERROU (Dano: 0)
+🔥  Goblin(7) sofreu 10 de dano por envenenamento
+💀  Goblin(7) foi derrotado!
+⚔️  Mago(5) atacou Goblin(8) → ATAQUE NORMAL (Dano: 35)
+🔥  Goblin(8) sofreu 0 de dano por envenenamento
+📊  Estado de Mago(5) → Vida: 80.0 | Status: NORMAL
+📊  Estado de Goblin(8) → Vida: 15.0 | Status: ENVENENADO
+🔥  Goblin(8) sofreu 10 de dano por envenenamento
+💀  Goblin(5) foi derrotado!
+
+📜  TURNO 4 📜
+═════════════════════════════════════════════════════════════
+⚔️  Lobisomem(6) atacou Guerreiro(0) → ERROU (Dano: 0)
+Goblin(8) está sem dardos e tenta fugir!
+🔥  Goblin(8) sofreu 10 de dano por envenenamento
+💀  Goblin(8) foi derrotado!
+⚔️  Arqueiro(3) atacou Lobisomem(6) → ATAQUE NORMAL (Dano: 15)
+📊  Estado de Arqueiro(3) → Vida: 90.0 | Status: NORMAL
+📊  Estado de Lobisomem(6) → Vida: 105.0 | Status: NORMAL
+⚔️  Arqueiro(4) atacou Lobisomem(6) → ATAQUE NORMAL (Dano: 15)
+📊  Estado de Arqueiro(4) → Vida: 90.0 | Status: NORMAL
+📊  Estado de Lobisomem(6) → Vida: 90.0 | Status: NORMAL
+Guerreiro(0) usou sua FORÇA BRUTA e causou dano extra!
+⚔️  Guerreiro(0) atacou Lobisomem(6) → ATAQUE NORMAL (Dano: 17)
+📊  Estado de Guerreiro(0) → Vida: 112.0 | Status: NORMAL
+📊  Estado de Lobisomem(6) → Vida: 73.0 | Status: NORMAL
+⚔️  Mago(1) atacou Lobisomem(6) → ATAQUE NORMAL (Dano: 20)
+📊  Estado de Mago(1) → Vida: 80.0 | Status: NORMAL
+📊  Estado de Lobisomem(6) → Vida: 53.0 | Status: NORMAL
+Mago(2) tentou atacar, mas está sem mana!
+Mago(5) tentou atacar, mas está sem mana!
+
+📜  TURNO 5 📜
+═════════════════════════════════════════════════════════════
+⚔️  Lobisomem(6) atacou Guerreiro(0) → ATAQUE NORMAL (Dano: 1)
+Lobisomem(6) se REGENERA e recupera 19.0 pontos de vida!
+📊  Estado de Lobisomem(6) → Vida: 72.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 111.0 | Status: NORMAL
+⚔️  Arqueiro(3) atacou Lobisomem(6) → ERROU (Dano: 0)
+⚔️  Arqueiro(4) atacou Lobisomem(6) → ATAQUE CRÍTICO! (Dano: 30)
+📊  Estado de Arqueiro(4) → Vida: 90.0 | Status: NORMAL
+📊  Estado de Lobisomem(6) → Vida: 42.0 | Status: NORMAL
+Guerreiro(0) usou sua FORÇA BRUTA e causou dano extra!
+⚔️  Guerreiro(0) atacou Lobisomem(6) → ATAQUE NORMAL (Dano: 17)
+📊  Estado de Guerreiro(0) → Vida: 111.0 | Status: NORMAL
+📊  Estado de Lobisomem(6) → Vida: 25.0 | Status: NORMAL
+⚔️  Mago(1) atacou Lobisomem(6) → ERROU (Dano: 0)
+Mago(2) tentou atacar, mas está sem mana!
+Mago(5) tentou atacar, mas está sem mana!
+
+📜  TURNO 6 📜
+═════════════════════════════════════════════════════════════
+⚔️  Lobisomem(6) atacou Guerreiro(0) → ATAQUE NORMAL (Dano: 1)
+Lobisomem(6) se REGENERA e recupera 19.0 pontos de vida!
+📊  Estado de Lobisomem(6) → Vida: 44.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 110.0 | Status: NORMAL
+⚔️  Arqueiro(3) atacou Lobisomem(6) → ERROU (Dano: 0)
+⚔️  Arqueiro(4) atacou Lobisomem(6) → ERROU (Dano: 0)
+⚔️  Guerreiro(0) atacou Lobisomem(6) → ATAQUE NORMAL (Dano: 10)
+📊  Estado de Guerreiro(0) → Vida: 110.0 | Status: NORMAL
+📊  Estado de Lobisomem(6) → Vida: 34.0 | Status: NORMAL
+Mago(1) tentou atacar, mas está sem mana!
+Mago(2) tentou atacar, mas está sem mana!
+Mago(5) tentou atacar, mas está sem mana!
+
+📜  TURNO 7 📜
+═════════════════════════════════════════════════════════════
+⚔️  Lobisomem(6) atacou Guerreiro(0) → ATAQUE NORMAL (Dano: 1)
+Lobisomem(6) se REGENERA e recupera 19.0 pontos de vida!
+📊  Estado de Lobisomem(6) → Vida: 53.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 109.0 | Status: NORMAL
+⚔️  Arqueiro(3) atacou Lobisomem(6) → ERROU (Dano: 0)
+⚔️  Arqueiro(4) atacou Lobisomem(6) → ATAQUE CRÍTICO! (Dano: 30)
+📊  Estado de Arqueiro(4) → Vida: 90.0 | Status: NORMAL
+📊  Estado de Lobisomem(6) → Vida: 23.0 | Status: NORMAL
+⚔️  Guerreiro(0) atacou Lobisomem(6) → ERROU (Dano: 0)
+Mago(1) tentou atacar, mas está sem mana!
+Mago(2) tentou atacar, mas está sem mana!
+Mago(5) tentou atacar, mas está sem mana!
+
+📜  TURNO 8 📜
+═════════════════════════════════════════════════════════════
+⚔️  Lobisomem(6) atacou Guerreiro(0) → ERROU (Dano: 0)
+⚔️  Arqueiro(3) atacou Lobisomem(6) → ERROU (Dano: 0)
+⚔️  Arqueiro(4) atacou Lobisomem(6) → ERROU (Dano: 0)
+⚔️  Guerreiro(0) atacou Lobisomem(6) → ERROU (Dano: 0)
+Mago(1) tentou atacar, mas está sem mana!
+Mago(2) tentou atacar, mas está sem mana!
+Mago(5) tentou atacar, mas está sem mana!
+
+📜  TURNO 9 📜
+═════════════════════════════════════════════════════════════
+⚔️  Lobisomem(6) atacou Guerreiro(0) → ATAQUE NORMAL (Dano: 1)
+Lobisomem(6) se REGENERA e recupera 19.0 pontos de vida!
+📊  Estado de Lobisomem(6) → Vida: 42.0 | Status: NORMAL
+📊  Estado de Guerreiro(0) → Vida: 108.0 | Status: NORMAL
+⚔️  Arqueiro(3) atacou Lobisomem(6) → ATAQUE CRÍTICO! (Dano: 30)
+📊  Estado de Arqueiro(3) → Vida: 90.0 | Status: NORMAL
+📊  Estado de Lobisomem(6) → Vida: 12.0 | Status: NORMAL
+⚔️  Arqueiro(4) atacou Lobisomem(6) → ATAQUE NORMAL (Dano: 15)
+💀  Lobisomem(6) foi derrotado!
+📊  Estado de Arqueiro(4) → Vida: 90.0 | Status: NORMAL
+📊  Estado de Lobisomem(6) → Vida: -3.0 | Status: NORMAL
+Guerreiro(0) não encontrou um alvo válido e não atacará neste turno.
+Mago(1) não encontrou um alvo válido e não atacará neste turno.
+Mago(2) não encontrou um alvo válido e não atacará neste turno.
+Mago(5) não encontrou um alvo válido e não atacará neste turno.
+💀  Lobisomem(6) foi derrotado!
+Heróis restantes: 6
+Monstros restantes: 0
+
+═════════════════════════════════════════════════════════════
+🎉  FIM DO JOGO: HERÓIS VENCERAM! 🎉
+═════════════════════════════════════════════════════════════
+
+════════════════════════ FIM DA PARTIDA ════════════════════════
+
